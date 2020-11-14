@@ -1,0 +1,201 @@
+<language name="STM8ASM" version="1" kateversion="5.0" section="Assembler" extensions="*.asm" mimetype="text/x-stm8asm">
+<!-- 
+
+*************************************************************************
+*                                                                       *
+*               Syntax highlighting for the Arm Assembler               *
+*                        Copyright (C) 2020                             *
+*                                                                       *
+*************************************************************************
+
+Author:   mywhat
+Date:     14th Nov, 2020
+Version:  1.0
+
+This file contains the XML syntax highlighting description for the Arm
+Assembler, for Notepadqq Editor.  Keywords have been taken
+directly from STM8 Programming manual.
+-->
+    <highlighting>
+        <list name="STM8Keywords">
+            <item>ADD</item>
+            <item>ADC</item>
+            <item>ADDW</item>
+            <item>AND</item>
+            <item>BCCM</item>
+            <item>BCP</item>
+            <item>BCPL</item>
+            <item>BREAK</item>
+            <item>BRES</item>
+            <item>BSET</item>
+            <item>BTJF</item>
+            <item>BTJT</item>
+            <item>CALL</item>
+            <item>CALLF</item>
+            <item>CALLR</item>
+            <item>CCF</item>
+            <item>CLR</item>
+            <item>CLRW</item>
+            <item>CP</item>
+            <item>CPW</item>
+            <item>CPL</item>
+            <item>CPLW</item>
+            <item>DEC</item>
+            <item>DECW</item>
+            <item>DIV</item>
+            <item>DIVW</item>
+            <item>EXG</item>
+            <item>EXGW</item>
+            <item>HALT</item>
+            <item>INC</item>
+            <item>INCW</item>
+            <item>INT</item>
+            <item>IRET</item>
+            <item>JP</item>
+            <item>JPF</item>
+            <item>JRA</item>
+            <item>JRC</item>
+            <item>JREQ</item>
+            <item>JRF</item>
+            <item>JRH</item>
+            <item>JRIH</item>
+            <item>JRIL</item>
+            <item>JRM</item>
+            <item>JRMI</item>
+            <item>JRNC</item>
+            <item>JRNE</item>
+            <item>JRNH</item>
+            <item>JRNM</item>
+            <item>JRNV</item>
+            <item>JRPL</item>
+            <item>JRSGE</item>
+            <item>JRSGT</item>
+            <item>JRSLE</item>
+            <item>JRSLT</item>
+            <item>JRT</item>
+            <item>JRUGE</item>
+            <item>JRUGT</item>
+            <item>JRULE</item>
+            <item>JRC</item>
+            <item>JRULT</item>
+            <item>JRV</item>
+            <item>LD</item>
+            <item>LDF</item>
+            <item>LDW</item>
+            <item>MOV</item>
+            <item>MUL</item>
+            <item>NEG</item>
+            <item>NEGW</item>
+            <item>NOP</item>
+            <item>OR</item>
+            <item>POP</item>
+            <item>POPW</item>
+            <item>PUSH</item>
+            <item>PUSHW</item>
+            <item>RCF</item>
+            <item>RET</item>
+            <item>RETF</item>
+            <item>RIM</item>
+            <item>RLC</item>
+            <item>RLCW</item>
+            <item>RLWA</item>
+            <item>RRC</item>
+            <item>RRCW</item>
+            <item>RRWA</item>
+            <item>RVF</item>
+            <item>SBC</item>
+            <item>SCF</item>
+            <item>SIM</item>
+            <item>SLL</item>
+            <item>SLA</item>
+            <item>SLLW</item>
+            <item>SLLA</item>
+            <item>SRA</item>
+            <item>SRAW</item>
+            <item>SRL</item>
+            <item>SRLW</item>
+            <item>SUB</item>
+            <item>SUBW</item>
+            <item>SWAP</item>
+            <item>SWAPW</item>
+            <item>TNZ</item>
+            <item>TNZW</item>
+            <item>TRAP</item>
+            <item>WFE</item>
+            <item>WFI</item>
+            <item>XOR</item>   
+        </list>
+        <list name="STM8Register">
+            <item>A</item>
+            <item>X</item>
+            <item>XL</item>
+            <item>XH</item>
+            <item>Y</item>
+            <item>YL</item>
+            <item>YH</item>
+            <item>PC</item>
+            <item>PCL</item>
+            <item>PCH</item>
+            <item>PCE</item>
+            <item>SP</item>
+            <item>CC</item>
+            <item>CC.V</item>
+            <item>CC.I0</item>
+            <item>CC.H</item>
+            <item>CC.I1</item>
+            <item>CC.N</item>
+            <item>CC.Z</item>
+            <item>CC.C</item>
+        </list>
+        <contexts>
+            <context name="Base" attribute="Normal Text" lineEndContext="#stay">
+                <RegExpr String="#define.*$" attribute="Preprocessor" context="#stay"/>
+                <RegExpr String="#include .*$" attribute="Preprocessor" context="#stay"/>
+                <RegExpr String=";.*$" attribute="Comment" context="#stay"/>
+                <RegExpr String="\.byte" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.byt" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.word" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.asc" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.dsb" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.fopt" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.text" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.data" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.bss" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.zero" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\.align" attribute="Data Type" context="#stay"/>
+                <RegExpr String="\$[A-Za-z0-9]*" attribute="Hex" context="#stay"/>
+                <RegExpr String=",x$" attribute="Keyword" context="#stay" insensitive="true"/>
+                <RegExpr String=",y$" attribute="Keyword" context="#stay" insensitive="true"/>
+                <RegExpr String="#" attribute="Keyword" context="#stay" insensitive="true"/>
+                <RegExpr String="\*=" attribute="Decimal" context="#stay"/>
+                <RangeDetect char = "&quot;" char1 = "&quot;" attribute = "String" context = "#stay"/>
+                <AnyChar String = "-+&lt;&gt;=;" attribute = "Operator" context = "#stay"/>
+                <RegExpr attribute="Global" context="Operator" String="\.[A-Za-z_][A-Za-z_.0-9]*$"/>
+                <RegExpr attribute="Label" context="Operator" String="^[A-Za-z_][A-Za-z_.0-9]*$" firstNonSpace="true"/>
+
+                <keyword attribute="Keyword" context="#stay" String="STM8Keywords"/>
+                <keyword attribute="Register" context="#stay" String="STM8Register"/>
+            </context>
+        </contexts>
+        <itemDatas>
+            <itemData name="Normal Text" defStyleNum="dsNormal"/>
+            <itemData name="Global" defStyleNum="dsVariable"/>
+            <itemData name="Label" defStyleNum="dsFunction"/>
+            <itemData name="Keyword" defStyleNum="dsKeyword"/>
+            <itemDate name="Register" defStyleNum="dsVariable">
+            <itemData name="Decimal" defStyleNum="dsDecVal"/>
+            <itemData name="Data Type" defStyleNum="dsDataType"/>
+            <itemData name="Hex" defStyleNum="dsBaseN"/>
+            <itemData name="String" defStyleNum="dsString"/>
+            <itemData name="Comment" defStyleNum="dsComment"/>
+            <itemData name="Preprocessor" defStyleNum="dsPreprocessor"/>
+            <itemData name="Operator" defStyleNum="dsOperator"/>
+        </itemDatas>
+    </highlighting>
+    <general>
+        <comments>
+            <comment name="singleLine" start=";"/>
+        </comments>
+        <keywords casesensitive="1"/>
+    </general>
+</language>
